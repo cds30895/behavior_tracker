@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    image: python:3.8
+    image: flask
     container_name: bt_flask
     build:
       context: .
