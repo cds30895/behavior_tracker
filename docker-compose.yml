@@ -5,7 +5,7 @@ services:
     image: flask
     container_name: bt_flask
     build:
-      context: .
+      context: ./flask
       dockerfile: ./flask/Dockerfile
     ports:
       - 5000:5000
