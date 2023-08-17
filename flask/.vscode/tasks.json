@@ -20,7 +20,7 @@
 			],
 			"dockerRun": {
 				"env": {
-					"FLASK_APP": "seed.py"
+					"FLASK_APP": "behavior_tracker\\wsgi.py"
 				}
 			},
 			"python": {
