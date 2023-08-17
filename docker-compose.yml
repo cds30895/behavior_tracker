@@ -6,7 +6,7 @@ services:
     container_name: bt_flask
     build:
       context: ./flask
-      dockerfile: ./flask/Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - 5000:5000
     depends_on:
@@ -18,8 +18,9 @@ services:
     environment:
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: admin123
-        POSTGRES_DB: nc_tutorials_db
+        POSTGRES_DB: behavior_tracker
         POSTGRES_HOST_AUTH_METHOD: trust
+        PGUSER: postgres
     ports:
         - "5432:5432"
     volumes:
