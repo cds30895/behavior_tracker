@@ -2,8 +2,8 @@
 Populate behavior_tracker database with default options
 """
 
-from behavior_tracker.src.models import Antecedent, Behavior_Desc, Consequence, Activity, Subject, Setting, db
-from behavior_tracker.src import create_app
+from src.models import Antecedent, Behavior_Desc, Consequence, Activity, Subject, Setting, db
+from src import create_app
 
 antecedents = ['Work expectations', 'Undesired task/plan', 'Peer conflict', 'Redirection', 'Percieved Unfairness', 'Missed directions', 'Change in routine or adults', 'Not ready for transition', 'Competition', 'Mistake', 'Other']
 behavior_desc = ['Elopement', 'Aggression - adult', 'Aggression - peer', 'Aggression - items, minor', 'Aggression - items, major', 'Misuse of objects', 'Negative talk - self', 'Negative talk - others', 'Yelling, screaming', 'Refusal, ignoring', 'Threatening', 'Inappropriate use of tech', 'Other']
