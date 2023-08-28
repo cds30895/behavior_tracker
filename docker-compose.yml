@@ -4,11 +4,16 @@ services:
   web:
     image: flask
     container_name: bt_flask
+    restart: on-failure
     build:
       context: ./flask
       dockerfile: ./Dockerfile
     ports:
       - 5000:5000
+    environment:
+      - DATABASE_URL=postgresql://postgres:admin123@pg_container:5432/behavior_tracker
+    command: >
+      sh -c "flask db upgrade && python seed.py && python bt_fake_data.py && flask run"
     depends_on:
       - pg
   pg:

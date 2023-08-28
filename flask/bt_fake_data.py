@@ -2,8 +2,8 @@
 # FIRST: Run seed.py
 
 from sqlalchemy.sql import text
-from behavior_tracker.src.models import Antecedent, Behavior_Desc, Consequence, Activity, Subject, Setting, db
-from behavior_tracker.src import create_app
+from src.models import Antecedent, Behavior_Desc, Consequence, Activity, Subject, Setting, db
+from src import create_app
 
 app = create_app()
 app.app_context().push()
