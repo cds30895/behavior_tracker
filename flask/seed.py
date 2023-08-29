@@ -14,9 +14,6 @@ settings = ['GenEd Classroom', 'SpEd Classroom', 'Specialist', 'Hallway', 'Gym',
 
 def main():
     """Main driver function"""
-    app = create_app()
-    app.app_context().push()
-    
     for item in antecedents:
         newrow = Antecedent(description = item)
         db.session.add(newrow)
@@ -59,7 +56,9 @@ def main():
     # insert settings
     db.session.commit()
 
-# run script
+# create app and run script if it hasn't been run before on this container
+app = create_app()
+app.app_context().push()
 ant = Antecedent.query.all()
 if len(ant) == 0:
     main()

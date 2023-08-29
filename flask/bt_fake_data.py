@@ -2,7 +2,7 @@
 # FIRST: Run seed.py
 
 from sqlalchemy.sql import text
-from src.models import Antecedent, Behavior_Desc, Consequence, Activity, Subject, Setting, db
+from src.models import Antecedent, Behavior_Desc, Consequence, Activity, Subject, Setting, db, Student
 from src import create_app
 
 app = create_app()
@@ -85,6 +85,7 @@ statements = [
         (1, 9),
         (2, 7)
     ; """]
+    
 stu = Student.query.all()
 if len(stu) == 0:
     for statement in statements:
