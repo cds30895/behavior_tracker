@@ -1,0 +1,13 @@
+{
+    "Servers": {
+      "1": {
+        "Name": "behavior_tracker",
+        "Group": "Servers",
+        "Host": "pg",
+        "Port": 5432,
+        "MaintenanceDB": "postgres",
+        "Username": "postgres",
+        "SSLMode": "prefer"
+      }
+    }
+  }
