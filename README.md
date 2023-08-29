@@ -21,7 +21,7 @@ Ensure Docker Desktop is running.  In the portfolio_project/flask directory, ent
 
     docker build . ; cd .. ; docker compose build ; docker compose up -d
 
-The containers may take some time to start.  When they are fully started, you can access pgadmin at http://localhost:5432, and you can make GET, POST, PATCH, and DELETE HTTP requests using Insomnia or a similar app at http://localhost:5000 using the routes defined below in the Endpoints section.
+The containers may take some time to start.  When they are fully started, you can access pgadmin at http://localhost:5432, and you can make GET, POST, PATCH, and DELETE HTTP requests using Insomnia or a similar app at http://localhost:5000 using the routes defined below in the Endpoints section.  Insomnia_behavior_tracker_requests.json is a file ready for import in Insomnia with all listed endpoints predifined as requests.
 
 ## Endpoints
 
