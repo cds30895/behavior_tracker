@@ -60,4 +60,6 @@ def main():
     db.session.commit()
 
 # run script
-main()
+ant = Antecedent.query.all()
+if len(ant) == 0:
+    main()

@@ -85,6 +85,7 @@ statements = [
         (1, 9),
         (2, 7)
     ; """]
-
-for statement in statements:
-    conn.execute(text(statement))
+stu = Student.query.all()
+if len(stu) == 0:
+    for statement in statements:
+        conn.execute(text(statement))
