@@ -10,6 +10,19 @@ With data gathered with my program, patterns, difficulties, and progress can all
 
 It is my hope that this project can be helpful to educators looking for a comprehensive data collection solution.  
 
+## Setup
+
+### Test Data
+By default, the docker-compose.yml file includes the command "python bt_fake_data.py", which populates the database with some test data.  You may choose to delete this command for a blank database, but leave the rest of the commands intact - "flask db upgrade" creates the structure of the database, "python seed.py" populates some tables with default vaules, and "flask run --host:0.0.0.0" runs the flask server.
+
+### Startup
+
+Ensure Docker Desktop is running.  In the portfolio_project/flask directory, enter the following command:
+
+    docker build . ; cd .. ; docker compose build ; docker compose up -d
+
+The containers may take some time to start.  When they are fully started, you can access pgadmin at http://localhost:5432, and you can make GET, POST, PATCH, and DELETE HTTP requests using Insomnia or a similar app at http://localhost:5000 using the routes defined below in the Endpoints section.
+
 ## Endpoints
 
 ### behaviors
