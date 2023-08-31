@@ -16,6 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build ./flask --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build ./flask --file Dockerfile --tag flask:$(date +%s)
     - name: Build Docker compose
       run: docker compose build
